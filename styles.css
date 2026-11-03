@@ -311,3 +311,41 @@ a { color: var(--pin); }
   }
   .ep-badge { justify-self: start; margin-top: 0.25rem; }
 }
+
+/* ---------- shop ---------- */
+.shop-group {
+  margin: 1.6rem 0 0.2rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+  margin-top: 0.9rem;
+}
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.7rem 0.7rem 1rem;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--parchment);
+  text-decoration: none;
+  transition: border-color 0.12s ease, transform 0.12s ease;
+}
+.shop-card:hover { border-color: var(--pin); transform: translateY(-2px); }
+.shop-card img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+.shop-card strong { font-size: 0.98rem; line-height: 1.35; }
+.shop-price { color: var(--pin); font-weight: 700; }
+@media (max-width: 640px) {
+  .shop-grid { grid-template-columns: 1fr 1fr; }
+}
