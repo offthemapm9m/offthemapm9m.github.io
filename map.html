@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Episode Map — Off The Map</title>
+<meta name="description" content="Every Off The Map Season 1 episode, pinned where it happened. The map behind the episodes.">
+<link rel="icon" type="image/png" href="off-the-map-profile.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  #map { height: 68vh; min-height: 380px; border-radius: 14px; border: 1px solid var(--line); z-index: 0; }
+  .map-wrap { margin-top: 10px; }
+  .leaflet-popup-content { font-size: 14px; line-height: 1.45; }
+  .leaflet-popup-content strong { color: #2e4158; }
+  .pin-list { columns: 2; column-gap: 28px; margin-top: 14px; }
+  .pin-list li { break-inside: avoid; margin-bottom: 6px; }
+  @media (max-width: 640px) { .pin-list { columns: 1; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <img src="off-the-map-profile.png" alt="Off The Map logo — an orange map pin" width="40" height="40">
+    <span>OFF THE MAP</span>
+  </a>
+  <nav class="site-nav" aria-label="Site">
+    <a href="index.html">Episodes</a>
+    <a href="shorts.html">Shorts</a>
+    <a href="map.html" aria-current="page">Map</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+  <section class="section">
+    <h1><span class="compass">🗺️</span> The map behind the episodes</h1>
+    <p class="section-intro">Every Season 1 episode, pinned where it actually happened — from a town under a Texas lake to a map error stranded above the 49th parallel. Tap a pin for the story.</p>
+    <div class="map-wrap"><div id="map" role="application" aria-label="Map of Off The Map episode locations"></div></div>
+    <p class="section-intro" style="margin-top:12px">Bonus pin: <strong>Towash, Texas</strong> — the town under Lake Whitney, from our Halloween Short. Two pins (Ep 7's Pacific spill and Ep 18's Agloe, NY) are approximate — the stories explain why.</p>
+  </section>
+
+  <section class="section">
+    <h2>Every pin, listed</h2>
+    <ol class="pin-list" id="pin-list"></ol>
+  </section>
+
+  <section class="band">
+    <a class="btn btn-discord" href="https://discord.gg/k9eTYErQFX" target="_blank" rel="noopener">Join the Discord</a>
+    <a class="btn btn-ghost" href="https://www.youtube.com/@OffTheMap-m9m" target="_blank" rel="noopener">Watch on YouTube</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Off The Map · Godley, Texas · New episodes Mon &amp; Thu, 7 AM CT</p>
+  <p><a href="https://www.youtube.com/@OffTheMap-m9m" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.tiktok.com/@rebelbigkountry" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.instagram.com/offthemap.m9m" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61595951542451" target="_blank" rel="noopener">Facebook</a> · <a href="https://x.com/OffTheMapM9m" target="_blank" rel="noopener">X</a></p>
+  <p class="fine">Map data © OpenStreetMap contributors · Pins mark the places the episodes are about; a few topic episodes are pinned at the city the story centers on.</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  var map = L.map('map', { worldCopyJump: true }).setView([35, -96], 3);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  function pin(lat, lng, html, approx) {
+    return L.circleMarker([lat, lng], {
+      radius: approx ? 6 : 7,
+      color: '#2e4158', weight: 2,
+      fillColor: approx ? '#e8b04b' : '#ff8a2a', fillOpacity: 0.95
+    }).addTo(map).bindPopup(html);
+  }
+
+  fetch('episode-locations.json')
+    .then(function (r) { return r.json(); })
+    .then(function (eps) {
+      var list = document.getElementById('pin-list');
+      var bounds = [];
+      eps.forEach(function (e) {
+        var approx = e.confidence !== 'high';
+        var html = '<strong>Ep ' + e.ep + ' — ' + e.title + '</strong><br>' +
+                   e.place + '<br><em>' + e.note + (approx ? ' (location approximate)' : '') + '</em>';
+        pin(e.lat, e.lng, html, approx);
+        bounds.push([e.lat, e.lng]);
+        var li = document.createElement('li');
+        li.textContent = 'Ep ' + e.ep + ' — ' + e.place + ': ' + e.title;
+        list.appendChild(li);
+      });
+      // Bonus pin: Towash, the town under Lake Whitney (Halloween Short)
+      pin(31.922234, -97.343275,
+          '<strong>Bonus — Towash, Texas</strong><br>Lake Whitney, Texas<br><em>The town that went under Lake Whitney in 1951 — our Halloween Short.</em>', false);
+      bounds.push([31.922234, -97.343275]);
+      map.fitBounds(bounds, { padding: [30, 30] });
+    })
+    .catch(function () {
+      document.getElementById('map').innerHTML = '<p style="padding:16px">The map could not load — the full episode list is on the Episodes page.</p>';
+    });
+</script>
+</body>
+</html>
