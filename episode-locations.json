@@ -1,272 +1,302 @@
 [
-  {
-    "ep": 1,
-    "title": "Why Texas Has Its Own Power Grid",
-    "place": "Austin, Texas",
-    "lat": 30.2672,
-    "lng": -97.7431,
-    "note": "Statewide topic — pinned at Austin; ERCOT grid failed in the February 2021 freeze.",
-    "confidence": "high"
-  },
-  {
-    "ep": 2,
-    "title": "What If Texas Was Its Own Country?",
-    "place": "Austin, Texas",
-    "lat": 30.2672,
-    "lng": -97.7431,
-    "note": "Statewide topic — pinned at Austin; Texas would be the world's 8th-largest economy.",
-    "confidence": "high"
-  },
-  {
-    "ep": 3,
-    "title": "The Tornado That Redrew the Map",
-    "place": "Jarrell, Texas",
-    "lat": 30.8265,
-    "lng": -97.605,
-    "note": "1997 F5 tornado erased Double Creek Estates in 13 minutes; 27 people died.",
-    "confidence": "high"
-  },
-  {
-    "ep": 4,
-    "title": "The Town That's Sinking the Fastest in America",
-    "place": "Houston, Texas",
-    "lat": 29.7604,
-    "lng": -95.3698,
-    "note": "Houston is America's fastest-sinking big city; Katy dropped 14 inches since 2007.",
-    "confidence": "high"
-  },
-  {
-    "ep": 5,
-    "title": "The Border That Makes No Sense",
-    "place": "Angle Inlet (Northwest Angle), Minnesota",
-    "lat": 49.345,
-    "lng": -95.058,
-    "note": "A 1755 map error stranded this Minnesota exclave above the 49th parallel.",
-    "confidence": "high"
-  },
-  {
-    "ep": 6,
-    "title": "Why This Desert Town Gets 350 Days of Sun",
-    "place": "Yuma, Arizona",
-    "lat": 32.6927,
-    "lng": -114.6156,
-    "note": "Sunniest place on Earth: 4,000+ sunshine hours under a permanent high-pressure dome.",
-    "confidence": "high"
-  },
-  {
-    "ep": 7,
-    "title": "How 29,000 Rubber Ducks Mapped the Ocean",
-    "place": "North Pacific Ocean (Friendly Floatees spill site)",
-    "lat": 44.7,
-    "lng": 178.1,
-    "note": "1992 container spill near the Date Line released 28,800 bath toys that mapped currents.",
-    "confidence": "check"
-  },
-  {
-    "ep": 8,
-    "title": "The Ghost Border Between East and West Texas",
-    "place": "100th meridian, central Texas",
-    "lat": 31.0,
-    "lng": -100.0,
-    "note": "Pinned on the line itself; the rainfall boundary dividing wet and dry Texas.",
-    "confidence": "high"
-  },
-  {
-    "ep": 9,
-    "title": "Why Kansas Is Flatter Than a Pancake (Scientifically Proven)",
-    "place": "Topeka, Kansas",
-    "lat": 39.0473,
-    "lng": -95.6752,
-    "note": "Statewide topic — pinned at Topeka; Kansas measured flatter than an IHOP pancake.",
-    "confidence": "high"
-  },
-  {
-    "ep": 10,
-    "title": "The Dam That Slowed Down the Earth",
-    "place": "Three Gorges Dam, China",
-    "lat": 30.8239,
-    "lng": 111.0037,
-    "note": "The dam's reservoir lengthened Earth's day by 0.06 microseconds, per NASA.",
-    "confidence": "high"
-  },
-  {
-    "ep": 11,
-    "title": "Why Airplanes Don't Fly Straight",
-    "place": "New York City, New York",
-    "lat": 40.7128,
-    "lng": -74.006,
-    "note": "Global topic — pinned at New York, whose Tokyo flights arc over Alaska.",
-    "confidence": "high"
-  },
-  {
-    "ep": 12,
-    "title": "The Island America Forgot",
-    "place": "Navassa Island, Caribbean",
-    "lat": 18.4027,
-    "lng": -75.0125,
-    "note": "US-claimed guano island disputed with Haiti; now an uninhabited wildlife refuge.",
-    "confidence": "high"
-  },
-  {
-    "ep": 13,
-    "title": "The Country That Exists Inside Another Country",
-    "place": "Maseru, Lesotho",
-    "lat": -29.3167,
-    "lng": 27.4833,
-    "note": "Enclave kingdom entirely inside South Africa, founded from mountain fortress Thaba Bosiu.",
-    "confidence": "high"
-  },
-  {
-    "ep": 14,
-    "title": "The City in Two States at Once",
-    "place": "Texarkana, Texas–Arkansas",
-    "lat": 33.4251,
-    "lng": -94.0477,
-    "note": "State Line Avenue splits the city; its post office straddles Texas and Arkansas.",
-    "confidence": "high"
-  },
-  {
-    "ep": 15,
-    "title": "What If the US Had Only 10 States?",
-    "place": "Lebanon, Kansas (geographic center of the contiguous US)",
-    "lat": 39.8283,
-    "lng": -98.5795,
-    "note": "Nationwide hypothetical — pinned at the geographic center of the contiguous US.",
-    "confidence": "high"
-  },
-  {
-    "ep": 16,
-    "title": "What If California Split Into Three States?",
-    "place": "Sacramento, California",
-    "lat": 38.5816,
-    "lng": -121.4944,
-    "note": "Statewide topic — pinned at Sacramento; the 2018 Cal 3 plan to split California.",
-    "confidence": "high"
-  },
-  {
-    "ep": 17,
-    "title": "Why Nobody Can Agree on Where \"The South\" Starts",
-    "place": "Atlanta, Georgia",
-    "lat": 33.749,
-    "lng": -84.388,
-    "note": "Regional topic — pinned at Atlanta; six rival definitions of where the South begins.",
-    "confidence": "high"
-  },
-  {
-    "ep": 18,
-    "title": "The Town the Map Got Wrong for 100 Years",
-    "place": "Agloe, New York",
-    "lat": 41.9643,
-    "lng": -74.9135,
-    "note": "Agloe, a fake copyright-trap town planted on 1920s maps that briefly became real.",
-    "confidence": "check"
-  },
-  {
-    "ep": 19,
-    "title": "The Best State to Survive the Apocalypse",
-    "place": "Boise, Idaho",
-    "lat": 43.615,
-    "lng": -116.2023,
-    "note": "Idaho ranked #1 for survival: water, farmland, isolation, low disaster risk.",
-    "confidence": "high"
-  },
-  {
-    "ep": 20,
-    "title": "Why Nobody Lives in 90% of Alaska",
-    "place": "Anchorage, Alaska",
-    "lat": 61.2181,
-    "lng": -149.9003,
-    "note": "Statewide topic — pinned at Anchorage; half of all Alaskans live in its metro.",
-    "confidence": "high"
-  },
-  {
-    "ep": 21,
-    "title": "The Loneliest Road in America",
-    "place": "Ely, Nevada",
-    "lat": 39.2477,
-    "lng": -114.8687,
-    "note": "Eastern anchor of US-50's Ely–Fernley stretch, dubbed America's loneliest road in 1986.",
-    "confidence": "high"
-  },
-  {
-    "ep": 22,
-    "title": "The Highway With (Almost) No Speed Limit",
-    "place": "Seguin, Texas (SH 130)",
-    "lat": 29.5688,
-    "lng": -97.9647,
-    "note": "Southern end of SH 130's 41 miles with America's fastest speed limit: 85 mph.",
-    "confidence": "high"
-  },
-  {
-    "ep": 23,
-    "title": "How the Mississippi Built America",
-    "place": "Vicksburg, Mississippi",
-    "lat": 32.3526,
-    "lng": -90.8779,
-    "note": "River that built America's cities; pinned at Vicksburg, its pivotal Civil War prize.",
-    "confidence": "high"
-  },
-  {
-    "ep": 24,
-    "title": "Why Chicago's River Flows Backward",
-    "place": "Chicago, Illinois",
-    "lat": 41.8781,
-    "lng": -87.6298,
-    "note": "In 1900 engineers reversed the river to carry sewage away from Lake Michigan.",
-    "confidence": "high"
-  },
-  {
-    "ep": 25,
-    "title": "The River Three Countries Fight Over",
-    "place": "El Paso, Texas",
-    "lat": 31.7619,
-    "lng": -106.485,
-    "note": "Border-river topic — pinned at El Paso; US–Mexico treaty fight over a shrinking river.",
-    "confidence": "high"
-  },
-  {
-    "ep": 26,
-    "title": "The Lake That Vanished Overnight",
-    "place": "Lake Peigneur, Louisiana",
-    "lat": 29.9808,
-    "lng": -91.9828,
-    "note": "In 1980 a drill punctured a salt mine and drained the entire lake overnight.",
-    "confidence": "high"
-  },
-  {
-    "ep": 27,
-    "title": "Why Florida Gets Every Hurricane",
-    "place": "Tallahassee, Florida",
-    "lat": 30.4383,
-    "lng": -84.2807,
-    "note": "Statewide topic — pinned at Tallahassee; 41% of US hurricane landfalls hit Florida.",
-    "confidence": "high"
-  },
-  {
-    "ep": 28,
-    "title": "The Hurricane That Rewrote the Rules",
-    "place": "Galveston, Texas",
-    "lat": 29.3013,
-    "lng": -94.7977,
-    "note": "1900 hurricane killed about 8,000; Galveston then raised its entire city 17 feet.",
-    "confidence": "high"
-  },
-  {
-    "ep": 29,
-    "title": "Why Tornado Alley Is Moving East",
-    "place": "Nashville, Tennessee",
-    "lat": 36.1627,
-    "lng": -86.7816,
-    "note": "Tornado activity is shifting into Dixie Alley; central Tennessee saw the largest increase.",
-    "confidence": "high"
-  },
-  {
-    "ep": 30,
-    "title": "The Map That Predicts Where You'll Live in 2050",
-    "place": "Duluth, Minnesota",
-    "lat": 46.7867,
-    "lng": -92.1005,
-    "note": "Nationwide topic — pinned at Duluth, a self-marketed Great Lakes climate refuge.",
-    "confidence": "high"
-  }
+ {
+  "ep": 1,
+  "title": "Why Texas Has Its Own Power Grid",
+  "place": "Austin, Texas",
+  "lat": 30.2672,
+  "lng": -97.7431,
+  "note": "Statewide topic — pinned at Austin; ERCOT grid failed in the February 2021 freeze.",
+  "confidence": "high",
+  "airdate": "2026-10-22"
+ },
+ {
+  "ep": 2,
+  "title": "What If Texas Was Its Own Country?",
+  "place": "Austin, Texas",
+  "lat": 30.2672,
+  "lng": -97.7431,
+  "note": "Statewide topic — pinned at Austin; Texas would be the world's 8th-largest economy.",
+  "confidence": "high",
+  "airdate": "2026-10-26"
+ },
+ {
+  "ep": 3,
+  "title": "The Tornado That Redrew the Map",
+  "place": "Jarrell, Texas",
+  "lat": 30.8265,
+  "lng": -97.605,
+  "note": "1997 F5 tornado erased Double Creek Estates in 13 minutes; 27 people died.",
+  "confidence": "high",
+  "airdate": "2026-10-29"
+ },
+ {
+  "ep": 4,
+  "title": "The Town That's Sinking the Fastest in America",
+  "place": "Houston, Texas",
+  "lat": 29.7604,
+  "lng": -95.3698,
+  "note": "Houston is America's fastest-sinking big city; Katy dropped 14 inches since 2007.",
+  "confidence": "high",
+  "airdate": "2026-11-02"
+ },
+ {
+  "ep": 5,
+  "title": "The Border That Makes No Sense",
+  "place": "Angle Inlet (Northwest Angle), Minnesota",
+  "lat": 49.345,
+  "lng": -95.058,
+  "note": "A 1755 map error stranded this Minnesota exclave above the 49th parallel.",
+  "confidence": "high",
+  "airdate": "2026-11-05"
+ },
+ {
+  "ep": 6,
+  "title": "Why This Desert Town Gets 350 Days of Sun",
+  "place": "Yuma, Arizona",
+  "lat": 32.6927,
+  "lng": -114.6156,
+  "note": "Sunniest place on Earth: 4,000+ sunshine hours under a permanent high-pressure dome.",
+  "confidence": "high",
+  "airdate": "2026-11-09"
+ },
+ {
+  "ep": 7,
+  "title": "How 29,000 Rubber Ducks Mapped the Ocean",
+  "place": "North Pacific Ocean (Friendly Floatees spill site)",
+  "lat": 44.7,
+  "lng": 178.1,
+  "note": "1992 container spill near the Date Line released 28,800 bath toys that mapped currents.",
+  "confidence": "check",
+  "airdate": "2026-11-12"
+ },
+ {
+  "ep": 8,
+  "title": "The Ghost Border Between East and West Texas",
+  "place": "100th meridian, central Texas",
+  "lat": 31.0,
+  "lng": -100.0,
+  "note": "Pinned on the line itself; the rainfall boundary dividing wet and dry Texas.",
+  "confidence": "high",
+  "airdate": "2026-11-16"
+ },
+ {
+  "ep": 9,
+  "title": "Why Kansas Is Flatter Than a Pancake (Scientifically Proven)",
+  "place": "Topeka, Kansas",
+  "lat": 39.0473,
+  "lng": -95.6752,
+  "note": "Statewide topic — pinned at Topeka; Kansas measured flatter than an IHOP pancake.",
+  "confidence": "high",
+  "airdate": "2026-11-19"
+ },
+ {
+  "ep": 10,
+  "title": "The Dam That Slowed Down the Earth",
+  "place": "Three Gorges Dam, China",
+  "lat": 30.8239,
+  "lng": 111.0037,
+  "note": "The dam's reservoir lengthened Earth's day by 0.06 microseconds, per NASA.",
+  "confidence": "high",
+  "airdate": "2026-11-23"
+ },
+ {
+  "ep": 11,
+  "title": "Why Airplanes Don't Fly Straight",
+  "place": "New York City, New York",
+  "lat": 40.7128,
+  "lng": -74.006,
+  "note": "Global topic — pinned at New York, whose Tokyo flights arc over Alaska.",
+  "confidence": "high",
+  "airdate": "2026-11-26"
+ },
+ {
+  "ep": 12,
+  "title": "The Island America Forgot",
+  "place": "Navassa Island, Caribbean",
+  "lat": 18.4027,
+  "lng": -75.0125,
+  "note": "US-claimed guano island disputed with Haiti; now an uninhabited wildlife refuge.",
+  "confidence": "high",
+  "airdate": "2026-11-30"
+ },
+ {
+  "ep": 13,
+  "title": "The Country That Exists Inside Another Country",
+  "place": "Maseru, Lesotho",
+  "lat": -29.3167,
+  "lng": 27.4833,
+  "note": "Enclave kingdom entirely inside South Africa, founded from mountain fortress Thaba Bosiu.",
+  "confidence": "high",
+  "airdate": "2026-12-03"
+ },
+ {
+  "ep": 14,
+  "title": "The City in Two States at Once",
+  "place": "Texarkana, Texas–Arkansas",
+  "lat": 33.4251,
+  "lng": -94.0477,
+  "note": "State Line Avenue splits the city; its post office straddles Texas and Arkansas.",
+  "confidence": "high",
+  "airdate": "2026-12-07"
+ },
+ {
+  "ep": 15,
+  "title": "What If the US Had Only 10 States?",
+  "place": "Lebanon, Kansas (geographic center of the contiguous US)",
+  "lat": 39.8283,
+  "lng": -98.5795,
+  "note": "Nationwide hypothetical — pinned at the geographic center of the contiguous US.",
+  "confidence": "high",
+  "airdate": "2026-12-10"
+ },
+ {
+  "ep": 16,
+  "title": "What If California Split Into Three States?",
+  "place": "Sacramento, California",
+  "lat": 38.5816,
+  "lng": -121.4944,
+  "note": "Statewide topic — pinned at Sacramento; the 2018 Cal 3 plan to split California.",
+  "confidence": "high",
+  "airdate": "2026-12-14"
+ },
+ {
+  "ep": 17,
+  "title": "Why Nobody Can Agree on Where \"The South\" Starts",
+  "place": "Atlanta, Georgia",
+  "lat": 33.749,
+  "lng": -84.388,
+  "note": "Regional topic — pinned at Atlanta; six rival definitions of where the South begins.",
+  "confidence": "high",
+  "airdate": "2026-12-17"
+ },
+ {
+  "ep": 18,
+  "title": "The Town the Map Got Wrong for 100 Years",
+  "place": "Agloe, New York",
+  "lat": 41.9643,
+  "lng": -74.9135,
+  "note": "Agloe, a fake copyright-trap town planted on 1920s maps that briefly became real.",
+  "confidence": "check",
+  "airdate": "2026-12-21"
+ },
+ {
+  "ep": 19,
+  "title": "The Best State to Survive the Apocalypse",
+  "place": "Boise, Idaho",
+  "lat": 43.615,
+  "lng": -116.2023,
+  "note": "Idaho ranked #1 for survival: water, farmland, isolation, low disaster risk.",
+  "confidence": "high",
+  "airdate": "2026-12-24"
+ },
+ {
+  "ep": 20,
+  "title": "Why Nobody Lives in 90% of Alaska",
+  "place": "Anchorage, Alaska",
+  "lat": 61.2181,
+  "lng": -149.9003,
+  "note": "Statewide topic — pinned at Anchorage; half of all Alaskans live in its metro.",
+  "confidence": "high",
+  "airdate": "2026-12-28"
+ },
+ {
+  "ep": 21,
+  "title": "The Loneliest Road in America",
+  "place": "Ely, Nevada",
+  "lat": 39.2477,
+  "lng": -114.8687,
+  "note": "Eastern anchor of US-50's Ely–Fernley stretch, dubbed America's loneliest road in 1986.",
+  "confidence": "high",
+  "airdate": "2026-12-31"
+ },
+ {
+  "ep": 22,
+  "title": "The Highway With (Almost) No Speed Limit",
+  "place": "Seguin, Texas (SH 130)",
+  "lat": 29.5688,
+  "lng": -97.9647,
+  "note": "Southern end of SH 130's 41 miles with America's fastest speed limit: 85 mph.",
+  "confidence": "high",
+  "airdate": "2027-01-04"
+ },
+ {
+  "ep": 23,
+  "title": "How the Mississippi Built America",
+  "place": "Vicksburg, Mississippi",
+  "lat": 32.3526,
+  "lng": -90.8779,
+  "note": "River that built America's cities; pinned at Vicksburg, its pivotal Civil War prize.",
+  "confidence": "high",
+  "airdate": "2027-01-07"
+ },
+ {
+  "ep": 24,
+  "title": "Why Chicago's River Flows Backward",
+  "place": "Chicago, Illinois",
+  "lat": 41.8781,
+  "lng": -87.6298,
+  "note": "In 1900 engineers reversed the river to carry sewage away from Lake Michigan.",
+  "confidence": "high",
+  "airdate": "2027-01-11"
+ },
+ {
+  "ep": 25,
+  "title": "The River Three Countries Fight Over",
+  "place": "El Paso, Texas",
+  "lat": 31.7619,
+  "lng": -106.485,
+  "note": "Border-river topic — pinned at El Paso; US–Mexico treaty fight over a shrinking river.",
+  "confidence": "high",
+  "airdate": "2027-01-14"
+ },
+ {
+  "ep": 26,
+  "title": "The Lake That Vanished Overnight",
+  "place": "Lake Peigneur, Louisiana",
+  "lat": 29.9808,
+  "lng": -91.9828,
+  "note": "In 1980 a drill punctured a salt mine and drained the entire lake overnight.",
+  "confidence": "high",
+  "airdate": "2027-01-18"
+ },
+ {
+  "ep": 27,
+  "title": "Why Florida Gets Every Hurricane",
+  "place": "Tallahassee, Florida",
+  "lat": 30.4383,
+  "lng": -84.2807,
+  "note": "Statewide topic — pinned at Tallahassee; 41% of US hurricane landfalls hit Florida.",
+  "confidence": "high",
+  "airdate": "2027-01-21"
+ },
+ {
+  "ep": 28,
+  "title": "The Hurricane That Rewrote the Rules",
+  "place": "Galveston, Texas",
+  "lat": 29.3013,
+  "lng": -94.7977,
+  "note": "1900 hurricane killed about 8,000; Galveston then raised its entire city 17 feet.",
+  "confidence": "high",
+  "airdate": "2027-01-25"
+ },
+ {
+  "ep": 29,
+  "title": "Why Tornado Alley Is Moving East",
+  "place": "Nashville, Tennessee",
+  "lat": 36.1627,
+  "lng": -86.7816,
+  "note": "Tornado activity is shifting into Dixie Alley; central Tennessee saw the largest increase.",
+  "confidence": "high",
+  "airdate": "2027-01-28"
+ },
+ {
+  "ep": 30,
+  "title": "The Map That Predicts Where You'll Live in 2050",
+  "place": "Duluth, Minnesota",
+  "lat": 46.7867,
+  "lng": -92.1005,
+  "note": "Nationwide topic — pinned at Duluth, a self-marketed Great Lakes climate refuge.",
+  "confidence": "high",
+  "airdate": "2027-02-01"
+ }
 ]
