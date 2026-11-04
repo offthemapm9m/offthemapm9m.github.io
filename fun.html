@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fun &amp; Games — Off The Map</title>
+<meta name="description" content="Map of the Week, weekly trivia, the Where in the World guessing game, and the milestones Off The Map has hit so far.">
+<link rel="icon" type="image/png" href="off-the-map-profile.png">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .fun-card { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin-top: 14px; background: #fffdf6; }
+  .fun-card h3 { margin-top: 0; }
+  .fun-card img { max-width: 100%; border-radius: 10px; border: 1px solid var(--line); }
+  .clues li { margin-bottom: 6px; }
+  .answer-box { display: none; margin-top: 12px; padding: 12px 14px; border-left: 4px solid #e06f12; background: #fdf3e3; border-radius: 6px; }
+  .reveal-btn { margin-top: 10px; cursor: pointer; }
+  .miles { list-style: none; padding-left: 0; }
+  .miles li { margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <img src="off-the-map-profile.png" alt="Off The Map logo — an orange map pin" width="40" height="40">
+    <span>OFF THE MAP</span>
+  </a>
+  <nav class="site-nav" aria-label="Site">
+    <a href="index.html">Episodes</a>
+    <a href="shorts.html">Shorts</a>
+    <a href="map.html">Map</a>
+    <a href="fun.html" aria-current="page">Fun</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+<main>
+  <section class="section">
+    <h1>Fun &amp; Games</h1>
+    <p class="section-intro">The between-episodes stuff: a map worth staring at, a question worth arguing over, and a place to guess. New rounds land Wednesdays — and the live versions run all week in our <a href="https://discord.gg/k9eTYErQFX" target="_blank" rel="noopener">Discord</a>.</p>
+  </section>
+
+  <section class="section">
+    <h2>🗺️ Map of the Week</h2>
+    <div class="fun-card">
+      <h3>Our own Season 1 Texas map</h3>
+      <img src="texas-map.png" alt="Off The Map Season 1 episode map — Texas edition, with pins at Austin, Jarrell, Houston, and Towash at Lake Whitney">
+      <p>First Map of the Week is the home turf: every Texas episode that's out, pinned where it happened — Austin (Eps 1–2), Jarrell (Ep 3), Houston (Ep 4), and the Towash star at Lake Whitney. Like our episode map, it only pins what's already aired. <a href="off-the-map-texas-map.pdf" download>Print it free (PDF)</a> or watch the <a href="map.html">live map</a> grow every Mon &amp; Thu.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>❓ Trivia of the Week</h2>
+    <div class="fun-card">
+      <p><strong>Why is the top border of the Texas Panhandle a perfectly straight line at exactly 36°30′ north latitude — and what 1820 law about slavery drew it there?</strong></p>
+      <p>Think it over, argue it out in <a href="https://discord.gg/k9eTYErQFX" target="_blank" rel="noopener">Discord #💬・general</a> — the answer lands Friday.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>🌍 Where in the World?</h2>
+    <div class="fun-card">
+      <p>Guess the mystery spot from the clues:</p>
+      <ul class="clues">
+        <li>It was a real Texas town — cotton gin, school, churches, the works.</li>
+        <li>In 1951 the government bought it, moved the graves, and let the water in.</li>
+        <li>On calm days, boaters float right over its main street.</li>
+        <li>Our Halloween Short told its story.</li>
+      </ul>
+      <button class="btn btn-primary reveal-btn" onclick="document.getElementById('witw-answer').style.display='block'; this.style.display='none';">Reveal the answer</button>
+      <div class="answer-box" id="witw-answer"><strong>Towash, Texas</strong> — now under Lake Whitney. The townsite went under in 1951; its foundations are still down there. Play the live game every week in Discord <strong>#🌍・where-in-the-world</strong>.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>🎉 Milestones</h2>
+    <div class="fun-card">
+      <ul class="miles">
+        <li>✅ <strong>Oct 22, 2026</strong> — First episode live: "Why Texas Has Its Own Power Grid"</li>
+        <li>✅ <strong>Oct 26, 2026</strong> — Season 1 rolling, new episodes every Mon &amp; Thu</li>
+        <li>✅ <strong>Nov 3, 2026</strong> — Passed 10 YouTube subscribers</li>
+        <li>✅ <strong>Nov 4, 2026</strong> — Podcast launched on Spotify</li>
+        <li>✅ <strong>Nov 4, 2026</strong> — 18 products in the shop (shirts, hoodies, and a sticker)</li>
+        <li>⬜ 25 YouTube subscribers</li>
+        <li>⬜ 10 Discord members</li>
+        <li>⬜ First merch sale</li>
+        <li>⬜ <strong>Feb 1, 2027</strong> — Episode 30 finale premiere</li>
+      </ul>
+      <p class="fine">Checked off as they happen — the same board runs in Discord #🎉・milestones.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2026 Off The Map · Godley, Texas · New episodes Mon &amp; Thu, 7 AM CT</p>
+  <p><a href="https://www.youtube.com/@OffTheMap-m9m" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.tiktok.com/@rebelbigkountry" target="_blank" rel="noopener">TikTok</a> · <a href="https://www.instagram.com/offthemap.m9m" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61595951542451" target="_blank" rel="noopener">Facebook</a> · <a href="https://x.com/OffTheMapM9m" target="_blank" rel="noopener">X</a></p>
+  <p class="fine">Map data © OpenStreetMap contributors · Pins mark the places the episodes are about; a few topic episodes are pinned at the city the story centers on.</p>
+</footer>
+
+</body>
+</html>
