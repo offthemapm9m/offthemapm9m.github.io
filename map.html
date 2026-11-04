@@ -37,13 +37,14 @@
 <main>
   <section class="section">
     <h1><span class="compass">🗺️</span> The map behind the episodes</h1>
-    <p class="section-intro">Every Season 1 episode, pinned where it actually happened — from a town under a Texas lake to a map error stranded above the 49th parallel. Tap a pin for the story.</p>
+    <p class="section-intro">Every Season 1 episode <strong>that's out</strong>, pinned where it actually happened — from a town under a Texas lake to a map error stranded above the 49th parallel. The map grows on its own: a new pin lands every Monday &amp; Thursday at 7 AM CT as each episode drops. Tap a pin for the story.</p>
     <div class="map-wrap"><div id="map" role="application" aria-label="Map of Off The Map episode locations"></div></div>
     <p class="section-intro" style="margin-top:12px">Bonus pin: <strong>Towash, Texas</strong> — the town under Lake Whitney, from our Halloween Short. Two pins (Ep 7's Pacific spill and Ep 18's Agloe, NY) are approximate — the stories explain why.</p>
   </section>
 
   <section class="section">
     <h2>Every pin, listed</h2>
+    <p class="section-intro" id="pin-count"></p>
     <ol class="pin-list" id="pin-list"></ol>
   </section>
 
@@ -78,9 +79,14 @@
   fetch('episode-locations.json')
     .then(function (r) { return r.json(); })
     .then(function (eps) {
+      // Only pin episodes that are OUT (Joshua's rule, 2026-11-04): today's date in Central Time
+      var todayCT = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Chicago' }).format(new Date());
+      var out = eps.filter(function (e) { return e.airdate && e.airdate <= todayCT; });
       var list = document.getElementById('pin-list');
+      document.getElementById('pin-count').textContent =
+        out.length + ' of ' + eps.length + ' episodes are out — more pins land every Mon & Thu.';
       var bounds = [];
-      eps.forEach(function (e) {
+      out.forEach(function (e) {
         var approx = e.confidence !== 'high';
         var html = '<strong>Ep ' + e.ep + ' — ' + e.title + '</strong><br>' +
                    e.place + '<br><em>' + e.note + (approx ? ' (location approximate)' : '') + '</em>';
