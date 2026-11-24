@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Off The Map — Interactive Map</title>
+<meta name="description" content="A general interactive map from Off The Map — pan, zoom and search anywhere on Earth.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root { --navy:#0d2137; --cream:#f5eeda; --gold:#d9a441; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; height:100%; font-family: Georgia, 'Times New Roman', serif; background: var(--navy); }
+  header {
+    background: var(--navy); color: var(--cream);
+    padding: 10px 16px; display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    border-bottom: 3px solid var(--gold);
+  }
+  header h1 { font-size: 20px; margin:0; letter-spacing:.5px; }
+  header h1 .pin { color: var(--gold); }
+  header p { margin:0; font-size: 13px; opacity:.85; }
+  #searchbar { display:flex; gap:8px; margin-left:auto; }
+  #search-input {
+    padding: 8px 10px; border-radius: 6px; border: 1px solid var(--gold);
+    font-size: 14px; width: 230px; background: var(--cream); color:#222;
+  }
+  #search-btn, #locate-btn {
+    padding: 8px 14px; border-radius: 6px; border: none; cursor: pointer;
+    background: var(--gold); color: var(--navy); font-weight: bold; font-size: 14px;
+  }
+  #search-btn:hover, #locate-btn:hover { filter: brightness(1.1); }
+  #map { width:100%; height: calc(100% - 57px); }
+  #status {
+    position: absolute; left: 12px; bottom: 24px; z-index: 1000;
+    background: rgba(13,33,55,.92); color: var(--cream);
+    padding: 6px 12px; border-radius: 6px; font-size: 13px; display:none;
+  }
+  .leaflet-popup-content { font-family: Georgia, serif; font-size: 14px; }
+  @media (max-width: 640px) {
+    #search-input { width: 150px; }
+    header h1 { font-size: 17px; }
+    #map { height: calc(100% - 97px); }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="pin">📍</span> OFF THE MAP</h1>
+  <p>Interactive map — pan, zoom &amp; search anywhere on Earth.</p>
+  <div id="searchbar">
+    <input id="search-input" type="text" placeholder="Search a place… (e.g. Three Gorges Dam)" aria-label="Search a place">
+    <button id="search-btn">Search</button>
+    <button id="locate-btn" title="Show where you are">📍 Me</button>
+  </div>
+</header>
+<div id="map"></div>
+<div id="status"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  var map = L.map('map', { worldCopyJump: true }).setView([32.5, -97.4], 6);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  L.control.scale({ imperial: true, metric: true }).addTo(map);
+
+  var marker = null;
+  var statusEl = document.getElementById('status');
+  function showStatus(text) {
+    statusEl.textContent = text;
+    statusEl.style.display = 'block';
+    clearTimeout(showStatus._t);
+    showStatus._t = setTimeout(function(){ statusEl.style.display = 'none'; }, 4000);
+  }
+
+  function dropPin(lat, lon, label) {
+    if (marker) { map.removeLayer(marker); }
+    marker = L.marker([lat, lon]).addTo(map);
+    if (label) { marker.bindPopup(label).openPopup(); }
+    map.setView([lat, lon], Math.max(map.getZoom(), 10));
+  }
+
+  // Click anywhere to drop a pin with the coordinates.
+  map.on('click', function(e) {
+    dropPin(e.latlng.lat, e.latlng.lng,
+      'Lat: ' + e.latlng.lat.toFixed(5) + '<br>Lon: ' + e.latlng.lng.toFixed(5));
+  });
+
+  function doSearch() {
+    var q = document.getElementById('search-input').value.trim();
+    if (!q) { return; }
+    showStatus('Searching for "' + q + '"…');
+    fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&q=' + encodeURIComponent(q))
+      .then(function(r) { return r.json(); })
+      .then(function(results) {
+        if (results && results.length) {
+          var r = results[0];
+          dropPin(parseFloat(r.lat), parseFloat(r.lon), r.display_name);
+          showStatus('Found: ' + r.display_name);
+        } else {
+          showStatus('No results for "' + q + '". Try a more specific name.');
+        }
+      })
+      .catch(function() { showStatus('Search failed — check your connection and try again.'); });
+  }
+
+  document.getElementById('search-btn').addEventListener('click', doSearch);
+  document.getElementById('search-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { doSearch(); }
+  });
+
+  document.getElementById('locate-btn').addEventListener('click', function() {
+    if (!navigator.geolocation) { showStatus('Geolocation is not supported in this browser.'); return; }
+    showStatus('Locating you…');
+    navigator.geolocation.getCurrentPosition(function(pos) {
+      dropPin(pos.coords.latitude, pos.coords.longitude, 'You are here (approx.)');
+      showStatus('Found you.');
+    }, function() {
+      showStatus('Could not get your location — permission may be off.');
+    });
+  });
+</script>
+</body>
+</html>
